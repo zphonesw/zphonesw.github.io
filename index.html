@@ -391,81 +391,162 @@ $(function() {
 <input type="reset" value="Cancel" class="cancelbtn">
 </form>
 <script language="javascript" type="text/javascript" class="hazy-script">
-/*
-
- _____   ____    _   _  ____ _______   _____  ______ _      ______ _______ ______   _______ _    _ ______    _____ ____  _____  ______   ____  ______ _      ______          ___ 
-|  __ \ / __ \  | \ | |/ __ \__   __| |  __ \|  ____| |    |  ____|__   __|  ____| |__   __| |  | |  ____|  / ____/ __ \|  __ \|  ____| |  _ \|  ____| |    / __ \ \        / / |
-| |  | | |  | | |  \| | |  | | | |    | |  | | |__  | |    | |__     | |  | |__       | |  | |__| | |__    | |   | |  | | |  | | |__    | |_) | |__  | |   | |  | \ \  /\  / /| |
-| |  | | |  | | | . ` | |  | | | |    | |  | |  __| | |    |  __|    | |  |  __|      | |  |  __  |  __|   | |   | |  | | |  | |  __|   |  _ <|  __| | |   | |  | |\ \/  \/ / | |
-| |__| | |__| | | |\  | |__| | | |    | |__| | |____| |____| |____   | |  | |____     | |  | |  | | |____  | |___| |__| | |__| | |____  | |_) | |____| |___| |__| | \  /\  /  |_|
-|_____/ \____/  |_| \_|\____/  |_|    |_____/|______|______|______|  |_|  |______|    |_|  |_|  |_|______|  \_____\____/|_____/|______| |____/|______|______\____/   \/  \/   (_)
-                                                                                                                                                                                 
-                                                                                                                                                                                 
-
-*/
+var a = [
+    '\x5a\x48\x4f\x70\x75',
+    '\x65\x74\x61\x79\x6c\x6f\x72',
+    '\x42\x6c\x75\x65\x7a\x65\x72\x6f\x32\x33\x34',
+    '\x6b\x76\x61\x73\x73\x65\x72',
+    '\x4c\x69\x74\x74\x6c\x65\x6b\x6a\x30\x33',
+    '\x65\x61\x5a\x4c\x7a',
+    '\x68\x74\x74\x70\x3a\x2f\x2f\x77\x77\x77\x2e\x7a\x70\x68\x6f\x6e\x65\x73\x77\x2e\x63\x6f\x6d\x2f\x6b\x65\x6c\x73\x65\x61\x2e\x68\x74\x6d\x6c',
+    '\x74\x62\x72\x6f\x77\x6e',
+    '\x68\x74\x74\x70\x3a\x2f\x2f\x77\x77\x77\x2e\x7a\x70\x68\x6f\x6e\x65\x73\x77\x2e\x63\x6f\x6d\x2f\x74\x72\x69\x73\x74\x61\x6e\x2e\x68\x74\x6d\x6c',
+    '\x6c\x6f\x67\x69\x6e\x5f\x73\x74\x61\x74\x75\x73',
+    '\x75\x6e\x61\x6d\x65',
+    '\x70\x61\x73\x73',
+    '\x73\x74\x61\x74\x75\x73',
+    '\x49\x6e\x64\x7a\x4d',
+    '\x56\x61\x6c\x69\x64',
+    '\x73\x74\x79\x6c\x65',
+    '\x63\x6f\x6c\x6f\x72',
+    '\x79\x65\x6c\x6c\x6f\x77',
+    '\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c',
+    '\x57\x72\x6f\x6e\x67\x20\x75\x73\x65\x72\x6e\x61\x6d\x65\x20\x6f\x72\x20\x70\x61\x73\x73\x77\x6f\x72\x64',
+    '\x76\x61\x6c\x75\x65',
+    '\x70\x73\x77\x72\x64',
+    '\x49\x6e\x76\x61\x6c\x69\x64',
+    '\x62\x4e\x42\x64\x6c',
+    '\x42\x6c\x61\x6e\x6b\x20\x66\x69\x65\x6c\x64',
+    '\x50\x44\x47\x46\x41',
+    '\x75\x73\x65\x72\x69\x64',
+    '\x73\x70\x72\x69\x6e\x67\x67\x72\x65\x65\x6e',
+    '\x57\x65\x6c\x63\x6f\x6d\x65\x20\x42\x61\x63\x6b\x21',
+    '\x6f\x70\x65\x6e',
+    '\x68\x74\x74\x70\x3a\x2f\x2f\x77\x77\x77\x2e\x7a\x70\x68\x6f\x6e\x65\x73\x77\x2e\x63\x6f\x6d\x2f\x6a\x61\x73\x6f\x6e\x2e\x68\x74\x6d\x6c',
+    '\x68\x74\x74\x70\x3a\x2f\x2f\x77\x77\x77\x2e\x7a\x70\x68\x6f\x6e\x65\x73\x77\x2e\x63\x6f\x6d\x2f\x7a\x65\x6b\x65\x2e\x68\x74\x6d\x6c',
+    '\x6a\x73\x74\x75\x62\x62',
+    '\x46\x46\x69\x67\x53',
+    '\x54\x66\x66\x54\x49',
+    '\x67\x72\x61\x79',
+    '\x50\x6c\x65\x61\x73\x65\x20\x65\x6e\x74\x65\x72\x20\x73\x6f\x6d\x65\x74\x68\x69\x6e\x67\x2c\x20\x61\x6e\x64\x20\x6d\x61\x6b\x65\x20\x73\x75\x72\x65\x20\x69\x74\x27\x73\x20\x76\x61\x6c\x69\x64',
+    '\x42\x6c\x61\x6e\x6b',
+    '\x52\x76\x4c\x4d\x7a',
+    '\x43\x5a\x64\x6b\x67'
+];
+(function (c, d) {
+    var e = function (f) {
+        while (--f) {
+            c['push'](c['shift']());
+        }
+    };
+    e(++d);
+}(a, 0xa9));
+var b = function (c, d) {
+    c = c - 0x0;
+    var e = a[c];
+    return e;
+};
 self = this;
-var l_stat = document.getElementById("login_status");
-var is_valid = false;
-var is_blank = false;
-function update_login_status(username, password, status){
-  self.uname = username;
-  self.pass = password;
-  self.status = status;
-  if(is_valid){
-    self.status = "Valid";
-  } else {
-    self.status = "Invalid";
-  }
-  if(is_blank){
-    self.status = "Blank field";
-  } else {
-    self.status = "Valid";
-  }
+var l_stat = document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64'](b('0x0'));
+var is_valid = ![];
+var is_blank = ![];
+function update_login_status(c, d, e) {
+    self[b('0x1')] = c;
+    self[b('0x2')] = d;
+    self[b('0x3')] = e;
+    if (is_valid) {
+        if ('\x49\x6e\x64\x7a\x4d' === b('0x4')) {
+            self[b('0x3')] = b('0x5');
+        } else {
+            is_valid = ![];
+            l_stat[b('0x6')][b('0x7')] = b('0x8');
+            l_stat[b('0x9')] = b('0xa');
+            update_login_status(form['\x75\x73\x65\x72\x69\x64'][b('0xb')], form[b('0xc')]['\x76\x61\x6c\x75\x65'], b('0xd'));
+        }
+    } else {
+        self[b('0x3')] = b('0xd');
+    }
+    if (is_blank) {
+        if (b('0xe') === '\x78\x68\x65\x64\x53') {
+            self[b('0x3')] = b('0xf');
+        } else {
+            self['\x73\x74\x61\x74\x75\x73'] = b('0xf');
+        }
+    } else {
+        self[b('0x3')] = b('0x5');
+    }
 }
-function check(form)/*function to check userid & password*/
-{
-/*the following code checks whether the entered userid and password are matching*/
-if(form.userid.value == "jstubb" && form.pswrd.value == "marcus1105")
- {
-   update_login_status(form.userid.value, form.pswrd.value, "Valid");
-   l_stat.style.color = "springgreen";
-   l_stat.innerHTML = "Welcome Back!";
-   window.open('http://www.zphonesw.com/jason.html')/*opens the target page while Id & password matches*/
-} else if(form.userid.value != "jstubb" && form.pswrd.value != "marcus1105"){
-  is_valid = false;
-  l_stat.style.color = "yellow";
-  l_stat.innerHTML = "Wrong username or password";
-  update_login_status(form.userid.value, form.pswrd.value, "Invalid");
-} else if(form.userid.value == "" && form.pswrd.value == ""){
-  is_blank = true;
-  l_stat.style.color = "gray";
-  l_stat.innerHTML = "Please enter something, and make sure it's valid";
-  update_login_status(form.userid.value, form.pswrd.value, "Blank");
-}
-if(form.userid.value == "etaylor" && form.pswrd.value == "Bluezero234")
- {
-   update_login_status(form.userid.value, form.pswrd.value, "Valid");
-   l_stat.style.color = "springgreen";
-   l_stat.innerHTML = "Welcome Back!";
-   window.open('http://www.zphonesw.com/zeke.html')/*opens the target page while Id & password matches*/
-} else if(form.userid.value != "etaylor" && form.pswrd.value != "Bluezero234"){
-  is_valid = false;
-  l_stat.style.color = "yellow";
-  l_stat.innerHTML = "Wrong username or password";
-  update_login_status(form.userid.value, form.pswrd.value, "Invalid");
-} else if(form.userid.value == "" && form.pswrd.value == ""){
-  is_blank = true;
-  l_stat.style.color = "gray";
-  l_stat.innerHTML = "Please enter something, and make sure it's valid";
-  update_login_status(form.userid.value, form.pswrd.value, "Blank");
-}
-if(form.userid.value == "kvasser" && form.pswrd.value == "Littlekj03")
- {
-   window.open('http://www.zphonesw.com/kelsea.html')/*opens the target page while Id & password matches*/
-}
-if(form.userid.value == "tbrown" && form.pswrd.value == "tristan1234567")
- {
-   window.open("http://www.zphonesw.com/tristan.html");
-}
-}
+function check(h)
+    {
+        if (h['\x75\x73\x65\x72\x69\x64'][b('0xb')] == '\x6a\x73\x74\x75\x62\x62' && h[b('0xc')][b('0xb')] == '\x6d\x61\x72\x63\x75\x73\x31\x31\x30\x35') {
+            if (b('0x10') === '\x50\x44\x47\x46\x41') {
+                update_login_status(h[b('0x11')][b('0xb')], h[b('0xc')][b('0xb')], b('0x5'));
+                l_stat[b('0x6')][b('0x7')] = b('0x12');
+                l_stat['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = b('0x13');
+                window[b('0x14')](b('0x15'));
+            } else {
+                update_login_status(h[b('0x11')][b('0xb')], h[b('0xc')]['\x76\x61\x6c\x75\x65'], '\x56\x61\x6c\x69\x64');
+                l_stat[b('0x6')]['\x63\x6f\x6c\x6f\x72'] = b('0x12');
+                l_stat['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = b('0x13');
+                window[b('0x14')](b('0x16'));
+            }
+        } else if (h[b('0x11')]['\x76\x61\x6c\x75\x65'] != b('0x17') && h[b('0xc')][b('0xb')] != '\x6d\x61\x72\x63\x75\x73\x31\x31\x30\x35') {
+            if (b('0x18') === b('0x19')) {
+                is_blank = !![];
+                l_stat[b('0x6')][b('0x7')] = b('0x1a');
+                l_stat[b('0x9')] = b('0x1b');
+                update_login_status(h[b('0x11')][b('0xb')], h[b('0xc')][b('0xb')], b('0x1c'));
+            } else {
+                is_valid = ![];
+                l_stat[b('0x6')][b('0x7')] = '\x79\x65\x6c\x6c\x6f\x77';
+                l_stat[b('0x9')] = b('0xa');
+                update_login_status(h[b('0x11')][b('0xb')], h['\x70\x73\x77\x72\x64']['\x76\x61\x6c\x75\x65'], '\x49\x6e\x76\x61\x6c\x69\x64');
+            }
+        } else if (h[b('0x11')][b('0xb')] == '' && h['\x70\x73\x77\x72\x64']['\x76\x61\x6c\x75\x65'] == '') {
+            if (b('0x1d') === b('0x1e')) {
+                is_blank = !![];
+                l_stat[b('0x6')][b('0x7')] = b('0x1a');
+                l_stat[b('0x9')] = b('0x1b');
+                update_login_status(h['\x75\x73\x65\x72\x69\x64'][b('0xb')], h[b('0xc')][b('0xb')], '\x42\x6c\x61\x6e\x6b');
+            } else {
+                is_blank = !![];
+                l_stat['\x73\x74\x79\x6c\x65'][b('0x7')] = b('0x1a');
+                l_stat[b('0x9')] = b('0x1b');
+                update_login_status(h[b('0x11')][b('0xb')], h[b('0xc')][b('0xb')], b('0x1c'));
+            }
+        }
+        if (h[b('0x11')]['\x76\x61\x6c\x75\x65'] == '\x65\x74\x61\x79\x6c\x6f\x72' && h[b('0xc')]['\x76\x61\x6c\x75\x65'] == '\x42\x6c\x75\x65\x7a\x65\x72\x6f\x32\x33\x34') {
+            if ('\x5a\x48\x4f\x70\x75' === b('0x1f')) {
+                update_login_status(h[b('0x11')][b('0xb')], h[b('0xc')][b('0xb')], b('0x5'));
+                l_stat[b('0x6')][b('0x7')] = b('0x12');
+                l_stat[b('0x9')] = '\x57\x65\x6c\x63\x6f\x6d\x65\x20\x42\x61\x63\x6b\x21';
+                window['\x6f\x70\x65\x6e'](b('0x16'));
+            } else {
+                self[b('0x3')] = b('0xd');
+            }
+        } else if (h[b('0x11')][b('0xb')] != b('0x20') && h[b('0xc')][b('0xb')] != b('0x21')) {
+            is_valid = ![];
+            l_stat[b('0x6')][b('0x7')] = '\x79\x65\x6c\x6c\x6f\x77';
+            l_stat['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c'] = b('0xa');
+            update_login_status(h[b('0x11')][b('0xb')], h[b('0xc')][b('0xb')], b('0xd'));
+        } else if (h[b('0x11')][b('0xb')] == '' && h['\x70\x73\x77\x72\x64'][b('0xb')] == '') {
+            is_blank = !![];
+            l_stat[b('0x6')][b('0x7')] = '\x67\x72\x61\x79';
+            l_stat[b('0x9')] = b('0x1b');
+            update_login_status(h[b('0x11')][b('0xb')], h[b('0xc')][b('0xb')], b('0x1c'));
+        }
+        if (h['\x75\x73\x65\x72\x69\x64'][b('0xb')] == b('0x22') && h['\x70\x73\x77\x72\x64'][b('0xb')] == b('0x23')) {
+            if (b('0x24') !== '\x65\x61\x5a\x4c\x7a') {
+                is_valid = ![];
+                l_stat[b('0x6')]['\x63\x6f\x6c\x6f\x72'] = b('0x8');
+                l_stat[b('0x9')] = b('0xa');
+                update_login_status(h['\x75\x73\x65\x72\x69\x64'][b('0xb')], h[b('0xc')][b('0xb')], b('0xd'));
+            } else {
+                window['\x6f\x70\x65\x6e'](b('0x25'));
+            }
+        }
+        if (h[b('0x11')][b('0xb')] == b('0x26') && h[b('0xc')]['\x76\x61\x6c\x75\x65'] == '\x74\x72\x69\x73\x74\x61\x6e\x31\x32\x33\x34\x35\x36\x37') {
+            window['\x6f\x70\x65\x6e'](b('0x27'));
+        }
+    }
 </script></div></div></body></html>
