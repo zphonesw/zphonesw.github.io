@@ -162,29 +162,154 @@
 </div></div></div></div><div data-silex-type="container" class="prevent-draggable container-element editable-style section-element silex-id-1545056612457-10 paged-element page-employee-login" data-silex-id="silex-id-1545056612457-10"><div data-silex-type="container" class="editable-style container-element silex-element-content silex-container-content website-width prevent-draggable silex-id-1545056612458-11" data-silex-id="silex-id-1545056612458-11"><div data-silex-type="html" class="editable-style silex-id-1565339397835-7 html-element" data-silex-id="silex-id-1565339397835-7"><div class="silex-element-content">
 
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Employee Login</title>
-<style>html, body {width: 100%; height: 100%; font-family: "Helvetica Neue", Helvetica, sans-serif; color: #444; -webkit-font-smoothing: antialiased; background: #f0f0f0;}#container {position: fixed; width: 340px; height: 258px; top: 50%; left: 50%; margin-top: -140px; margin-left: -170px; background: #fff; border-radius: 3px; border: 2px solid #FF9033; box-shadow: 0 1px 2px rgba(0, 0, 0, .1);}form {margin: 0 auto; margin-top: 20px;}label {color: #555; display: inline-block; margin-left: 18px; padding-top: 10px; font-size: 14px;}p a {font-size: 11px; color: #aaa; float: right; margin-top: -13px; margin-right: 20px; -webkit-transition: all .4s ease; -moz-transition: all .4s ease; transition: all .4s ease;}p a:hover {color: #555;}input {font-family: "Helvetica Neue", Helvetica, sans-serif; font-size: 12px; outline: none;}input[type=text],
-input[type=password] {color: #777; padding-left: 10px; margin: 10px; margin-top: 20px; margin-left: 18px; width: 290px; height: 35px; border: 1px solid #FFFFFF; border-radius: 2px; box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #FFFFFF; -webkit-transition: all .4s ease; -moz-transition: all .4s ease; transition: all .4s ease;}input[type=text]:hover,
-input[type=password]:hover {border: 1px solid #FF9033; box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #FF9033;}input[type=text]:focus,
-input[type=password]:focus {border: 1px solid #FF9033; box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #FF9033;}#lower {background: #FF9033; width: 100%; height: 69px; margin-top: 30px; box-shadow: inset 0 1px 1px #fff; border-top: 1px solid #ccc; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}input[type=checkbox] {margin-left: 25px; margin-top: 30px;}.check {margin-left: -4px; font-size: 15px; color: #444; text-shadow: 0 1px 0 #fff;}input[type=submit] {float: right; margin-right: 20px; margin-top: 20px; width: 80px; height: 30px; font-size: 14px; color: #444; text-shadow: 0 1px 0 #fff; background-color: #FF9033; background-image: linear-gradient(top left 90deg, #FF7D33 0%, #FF9033 100%); border-radius: 30px; border: 1px solid #FF9033; box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5); cursor: pointer;}input[type=submit]:hover {background-image: linear-gradient(top left 90deg, #FF9033 0%, #FF9033 100%);}input[type=submit]:active {background-image: linear-gradient(top left 90deg, #FF9033 0%, #FF9033 100%);}</style>
+<style>
+/* Basics */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    background: #f0f0f0;
+}
+#container {
+    position: fixed;
+    width: 340px;
+    height: 258px;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -170px;
+	background: #fff;
+    border-radius: 3px;
+    border: 2px solid #FF9033;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	
+}
+form {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+label {
+    color: #555;
+    display: inline-block;
+    margin-left: 18px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+p a {
+    font-size: 11px;
+    color: #aaa;
+    float: right;
+    margin-top: -13px;
+    margin-right: 20px;
+ -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+}
+p a:hover {
+    color: #555;
+}
+input {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 12px;
+    outline: none;
+}
+input[type=text],
+input[type=password] {
+    color: #777;
+    padding-left: 10px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-left: 18px;
+    width: 290px;
+    height: 35px;
+	border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #FFFFFF;
+-webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    transition: all .4s ease;
+	}
+input[type=text]:hover,
+input[type=password]:hover {
+    border: 1px solid #FF9033;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #FF9033;
+}
+input[type=text]:focus,
+input[type=password]:focus {
+    border: 1px solid #FF9033;
+    box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #FF9033;
+}
+#lower {
+    background: #FF9033;
+    width: 100%;
+    height: 69px;
+    margin-top: 30px;
+	  box-shadow: inset 0 1px 1px #fff;
+    border-top: 1px solid #ccc;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+input[type=checkbox] {
+    margin-left: 25px;
+    margin-top: 30px;
+}
+.check {
+    margin-left: -4px;
+	font-size: 15px;
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+}
+input[type=submit] {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+font-size: 14px;
+    
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #FF9033; /*IE fallback*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF9033), to(#FF9033));
+    background-image: -moz-linear-gradient(top left 90deg, #FF9033 0%, #FF9033 100%);
+    background-image: linear-gradient(top left 90deg, #FF7D33 0%, #FF9033 100%);
+    border-radius: 30px;
+    border: 1px solid #FF9033;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF9033), to(#FF9033));
+    background-image: -moz-linear-gradient(top left 90deg, #FF9033 0%, #FF9033 100%);
+    background-image: linear-gradient(top left 90deg, #FF9033 0%, #FF9033 100%);
+}
+input[type=submit]:active {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#FF9033), to(#FF9033));
+    background-image: -moz-linear-gradient(top left 90deg, #FF9033 0%, #FF9033 100%);
+    background-image: linear-gradient(top left 90deg, #FF9033 0%, #FF9033 100%);
+}
+</style>
 
+</head>
 
-
-
+<body>
     <!-- Begin Page Content -->
     <div id="container">
         <form>
-           <input type="text" name="userid" placeholder="Username">
-<br>
-<input type="password" id="pswrd" placeholder="Password">
+           <input type="text" name="userid" placeholder="Username"/>
+<br/>
+<input type="password" id="pswrd" placeholder="Password"/>
             <div id="lower">
                 <input type="checkbox" onclick="myFunction()"> <label class="check" for="checkbox">Show Password</label>
                 <input type="submit" value="Login" class="loginbtn" onclick="check(this.form)">
             </div><!--/ lower-->
         </form>
 <!--/ lower-->
-<script language="javascript" type="text/javascript">
+<script language="javascript">
 function check(form)/*function to check userid & password*/
 {
 /*the following code checks whether the entered userid and password are matching*/
@@ -206,13 +331,10 @@ if(form.userid.value == "jstubblefield" && form.pswrd.value == "Shantiel1105")
 }
 if(form.userid.value == "tbrown" && form.pswrd.value == "tristan1234567")
  {
-   window.open("https://www.zphonesw.com/Tristan Dashboard.html");
+   window.open('https://www.zphonesw.com/Tristan Dashboard.html');
 }
-else
-{
   alert("Error Password or Username")/*displays error message*/
  }
-}
 
 function myFunction() {
   var x = document.getElementById("pswrd");
